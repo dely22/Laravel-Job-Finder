@@ -37,7 +37,7 @@
                 Hadeel Jameel 
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item fs-6 fw-bold" href="membr.html">See Members</a></li>
+                <li><a class="dropdown-item fs-6 fw-bold" href="member.html">See Members</a></li>
                 <li><a class="dropdown-item fs-6 fw-bold" href="../index.html">LogOut</a></li>
                 </ul>
               </div>

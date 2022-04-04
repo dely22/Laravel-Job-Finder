@@ -70,7 +70,7 @@
             <a class="nav-link" href="pages/connect.html">Connect Us</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="user/membr.html">Members</a>
+            <a class="nav-link" href="user/member.html">Members</a>
           </li>
            <li class="nav-item">
             <a class="nav-link" href="pages/companies.html">Partnars </a>
@@ -122,7 +122,7 @@
               </div>
             </div>
             <div class="modal-footer pt-4">                  
-              <a href="user/profaile.html" type="button" class="btn btn-dark mx-auto w-100">Login</a>
+              <a href="user/profile.html" type="button" class="btn btn-dark mx-auto w-100">Login</a>
             </div>
             <p class="text-center">Not yet account, <a href="#" data-bs-toggle="modal" data-bs-target="#SignForm"
             data-bs-dismiss="modal" >Signup</a></p> 
@@ -161,7 +161,7 @@
                           <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
                       </div>
                       <div class="col-md-12">
-                          <a href="user/profaile.html" type="button"
+                          <a href="user/profile.html" type="button"
                           class="btn btn-dark mx-auto w-100">Signup Now</a>
                   </div>
               </div>

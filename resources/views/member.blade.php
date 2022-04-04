@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Members</title>
+    <title>{{route('member')}}s</title>
 
     
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -18,8 +18,8 @@
         <div class="row mx-1 bg-white my-3 col-12 d-flex justify-content-lg-between shadow">
             <nav aria-label="breadcrumb" class="main-breadcrumb col-6 p-3">
               <ol class="breadcrumb ms-3" >
-                <li class="breadcrumb-item fs-6 fw-bold"><a href="../index.html">Home</a></li>
-                <li class="breadcrumb-item active fs-6 fw-bold" aria-current="page"> Job Finder Members</li>
+                <li class="breadcrumb-item fs-6 fw-bold"><a href="{{route('index')}}">Home</a></li>
+                <li class="breadcrumb-item active fs-6 fw-bold" aria-current="page"> Job Finder {{route('member')}}s</li>
               </ol>
               
             </nav>
@@ -28,10 +28,10 @@
         </div>
          <!-- top nav end -->
 
-        <!-- MeMbers -->
+        <!-- {{route('member')}}s -->
    <section class="container mb-2">
      <div class="text-center mb-5">
-        <h2 class="section-heading justify-content-center text-uppercase text-center text-danger">Job Finder Members</h2>
+        <h2 class="section-heading justify-content-center text-uppercase text-center text-danger">Job Finder {{route('member')}}s</h2>
       </div>
       <div class="row">
         <!-- card -->

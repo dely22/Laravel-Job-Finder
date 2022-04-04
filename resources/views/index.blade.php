@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Searcher</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/lastjobs.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/lastjobs.css" rel="stylesheet">
 
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/boxicons.min.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-    <link href="/css/adv.css" rel="stylesheet">
-    <link href="/css/lastjob.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/boxicons.min.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/adv.css" rel="stylesheet">
+    <link href="../css/lastjob.css" rel="stylesheet">
 </head>
 <body class="bg-light">
       <!-- Navigation-->
@@ -58,22 +58,22 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/jobs.html">Jobs</a>
+            <a class="nav-link" href="/{{route('jobs')}}">Jobs</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="pages/services.html">Services</a>
+            <a class="nav-link" href="/{{route('services')}}">Services</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="pages/about.html">About us</a>
+            <a class="nav-link" href="/{{route('about')}}">About us</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="pages/connect.html">Connect Us</a>
+            <a class="nav-link" href="/{{route('connect')}}">Connect Us</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="user/member.html">Members</a>
+            <a class="nav-link" href="user/{{route('member')}}">{{route('member')}}s</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="pages/companies.html">Partnars </a>
+            <a class="nav-link" href="/{{route('companies')}}">Partnars </a>
           </li>       
 
           <li class="nav-item dropdown">
@@ -116,8 +116,8 @@
                   <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
               </div>
               <div class="mb-3">
-                  <input class="form-check-input" type="checkbox" value="" id="remember" required>
-                  <label class="form-check-label" for="remember">Remember Me</label>
+                  <input class="form-check-input" type="checkbox" value="" id="re{{route('member')}}" required>
+                  <label class="form-check-label" for="re{{route('member')}}">Re{{route('member')}} Me</label>
                   <a href="#" class="float-end">Forgot Password</a>
               </div>
             </div>
@@ -251,7 +251,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small> 
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                            <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                            <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -270,7 +270,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small> 
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                         <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                         <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -289,7 +289,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small> 
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                         <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                         <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -310,7 +310,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small> 
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                    <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                    <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -329,7 +329,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small> 
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                             <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                             <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -348,7 +348,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small> 
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                          <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                          <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>

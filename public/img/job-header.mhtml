@@ -950,7 +950,7 @@ rview, recruitment agency vector illustration"></div></div><div aria-label=
 =3D"AssetGrids_GridItemContainer_div" class=3D"jss1530 jss1424 jss1428 jss1=
 427" style=3D"height: 275.917px; width: 572.942px;"><a class=3D"jss1531 jss=
 108 jss109" aria-label=3D"Jobs with person using a laptop on a white table"=
- tabindex=3D"0" href=3D"https://www.shutterstock.com/image-photo/jobs-perso=
+ tabindex=3D"0" href=3D"https://www.shutterstock.com/image-photo{{route('jobs')}}-perso=
 n-using-laptop-on-white-1185550384"></a><div class=3D"jss1544"><div class=
 =3D"jss1548"><button class=3D"MuiButtonBase-root MuiIconButton-root jss1551=
 " tabindex=3D"0" type=3D"button" aria-label=3D"Preview" title=3D"Preview"><=
@@ -962,7 +962,7 @@ span class=3D"MuiIconButton-label"><svg class=3D"MuiSvgIcon-root" focusable=
 563 7.604 1.88-1.88zm-8.414 1.466c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 =
 8 8-3.582 8-8 8z"></path></svg></span></button></div></div><div class=3D"js=
 s1534"><img loading=3D"lazy" class=3D"jss1535" src=3D"https://image.shutter=
-stock.com/image-photo/jobs-person-using-laptop-on-260nw-1185550384.jpg" alt=
+stock.com/image-photo{{route('jobs')}}-person-using-laptop-on-260nw-1185550384.jpg" alt=
 =3D"Jobs with person using a laptop on a white table" title=3D"Jobs with pe=
 rson using a laptop on a white table"></div></div><div aria-label=3D"Asset =
 Find a job" data-automation=3D"AssetGrids_GridItemContainer_div" class=3D"j=
@@ -2739,7 +2739,7 @@ sable=3D"false" viewBox=3D"0 0 32 32" aria-hidden=3D"true"><path d=3D"M29.3=
 82 8 8-3.582 8-8 8-8-3.582-8-8z"></path></svg><span class=3D"MuiChip-label =
 jss1538">Computing Devices and Phones</span><span class=3D"MuiTouchRipple-r=
 oot"></span></div></a><a class=3D"jss1539 jss108 jss109" href=3D"https://ww=
-w.shutterstock.com/search/Jobs%2FProfessions"><div class=3D"MuiButtonBase-r=
+w.shutterstock.com/search{{route('jobs')}}%2FProfessions"><div class=3D"MuiButtonBase-r=
 oot MuiChip-root jss1536 MuiChip-outlined MuiChip-clickable" tabindex=3D"-1=
 " role=3D"button"><svg class=3D"MuiSvgIcon-root MuiChip-icon jss1540" focus=
 able=3D"false" viewBox=3D"0 0 32 32" aria-hidden=3D"true"><path d=3D"M29.33=
@@ -2885,7 +2885,7 @@ bmit.shutterstock.com/?language=3Den" color=3D"inherit" rel=3D"noreferrer n=
 oopener" target=3D"_blank"><p class=3D"MuiTypography-root-567 jss632 MuiTyp=
 ography-body1-569 MuiTypography-colorTextSecondary-593">Sell your content</=
 p></a><a class=3D"MuiListItem-root-634 MuiListItem-gutters-639 jss667 jss66=
-8" href=3D"https://shutterstock.com/about" color=3D"inherit" rel=3D"norefer=
+8" href=3D"https://shutterstock.com{{route('about')}}" color=3D"inherit" rel=3D"norefer=
 rer noopener" target=3D"_blank"><p class=3D"MuiTypography-root-567 jss632 M=
 uiTypography-body1-569 MuiTypography-colorTextSecondary-593">About us</p></=
 a><a class=3D"MuiListItem-root-634 MuiListItem-gutters-639 jss667 jss668" h=
@@ -2921,7 +2921,7 @@ ck.com/?language=3Den" rel=3D"noreferrer noopener" target=3D"_blank"><p cla=
 ss=3D"MuiTypography-root-567 jss670 MuiTypography-body1-569 MuiTypography-c=
 olorTextSecondary-593">Sell your content</p></a><a class=3D"MuiListItem-roo=
 t-634 jss672 MuiListItem-gutters-639 jss667 jss668" href=3D"https://shutter=
-stock.com/about" rel=3D"noreferrer noopener" target=3D"_blank"><p class=3D"=
+stock.com{{route('about')}}" rel=3D"noreferrer noopener" target=3D"_blank"><p class=3D"=
 MuiTypography-root-567 jss670 MuiTypography-body1-569 MuiTypography-colorTe=
 xtSecondary-593">About us</p></a><a class=3D"MuiListItem-root-634 jss672 Mu=
 iListItem-gutters-639 jss667 jss668" href=3D"https://careers.shutterstock.c=
@@ -23358,7 +23358,7 @@ Du2AvyDNtHZCxZEfIE7ZF6jN2ZRcdBWtZHcPXvmmlZsD7vghxUgQAAA=
 ------MultipartBoundary--J9kysCSDY8ejswhEUJL5ca0QQceF5WdamSSX6PBDQ1----
 Content-Type: image/webp
 Content-Transfer-Encoding: base64
-Content-Location: https://image.shutterstock.com/image-photo/jobs-person-using-laptop-on-260nw-1185550384.jpg
+Content-Location: https://image.shutterstock.com/image-photo{{route('jobs')}}-person-using-laptop-on-260nw-1185550384.jpg
 
 UklGRqiKAABXRUJQVlA4IJyKAADwxwGdASobAhgBPjEWiUOiISETmRYEIAMEsrcCv5kG9KX6y0NS
 far3j+l+XH5HfPLzL41fAPC39y+cH/R3l/Cf9HzTugP9h/fv8B/3P8z86v+/65P7r6gv6vf73/J/

@@ -27,7 +27,7 @@
         <div class="row mx-1 bg-white my-3 col-12 d-flex justify-content-lg-between shadow">
             <nav aria-label="breadcrumb" class="main-breadcrumb col-6 p-3">
               <ol class="breadcrumb ms-3" >
-                <li class="breadcrumb-item fs-6 fw-bold"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item fs-6 fw-bold"><a href="{{route('index')}}">Home</a></li>
                 <li class="breadcrumb-item active fs-6 fw-bold" aria-current="page"> Profile</li>
               </ol>
               
@@ -37,8 +37,8 @@
                 Hadeel Jameel 
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item fs-6 fw-bold" href="member.html">See Members</a></li>
-                <li><a class="dropdown-item fs-6 fw-bold" href="../index.html">LogOut</a></li>
+                <li><a class="dropdown-item fs-6 fw-bold" href="{{route('member')}}">See {{route('member')}}s</a></li>
+                <li><a class="dropdown-item fs-6 fw-bold" href="{{route('index')}}">LogOut</a></li>
                 </ul>
               </div>
            

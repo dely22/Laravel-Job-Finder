@@ -19,8 +19,8 @@ class UsersController extends Controller
     {
         return view('profile');
     }
-    function members()
+    function {{route('member')}}s()
     {
-        return view('member');
+        return view('{{route('member')}}');
     }
 }

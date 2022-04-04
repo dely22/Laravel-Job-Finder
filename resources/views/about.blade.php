@@ -25,25 +25,25 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+            <a class="nav-link " aria-current="page" href="{{route('index')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="jobs.html">Jobs</a>
+            <a class="nav-link" href="{{route('jobs')}}">Jobs</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link" href="{{route('services')}}">Services</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link active" href="about.html">About us</a>
+            <a class="nav-link active" href="{{route('about')}}">About us</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="connect.html">Connect Us</a>
+            <a class="nav-link" href="{{route('connect')}}">Connect Us</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link " href="companies.html">Companies</a>
+            <a class="nav-link " href="{{route('companies')}}">Companies</a>
           </li>
             <li class="nav-item">
-            <a class="nav-link" href="../user/member.html">Members</a>
+            <a class="nav-link" href="../user/{{route('member')}}">{{route('member')}}s</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Ar</a>
@@ -86,8 +86,8 @@
                   <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
               </div>
               <div class="mb-3">
-                  <input class="form-check-input" type="checkbox" value="" id="remember" required>
-                  <label class="form-check-label" for="remember">Remember Me</label>
+                  <input class="form-check-input" type="checkbox" value="" id="re{{route('member')}}" required>
+                  <label class="form-check-label" for="re{{route('member')}}">Re{{route('member')}} Me</label>
                   <a href="#" class="float-end">Forgot Password</a>
               </div>
             </div>
@@ -152,7 +152,7 @@
                 </div>
                 <ul class="timeline">
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img/about/1.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img{{route('about')}}/1.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>2009-2011</h4>
@@ -162,7 +162,7 @@
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img/about/2.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img{{route('about')}}/2.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>March 2011</h4>
@@ -172,7 +172,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img/about/3.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img{{route('about')}}/3.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>December 2015</h4>
@@ -182,7 +182,7 @@
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img/about/4.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img{{route('about')}}/4.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>July 2020</h4>

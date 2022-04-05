@@ -1,28 +1,26 @@
 <?php
 
-namespace App\Http\Controllers;
-
 namespace App\Http\Controllers\Front;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    //
     function login()
     {
         return view('login');
     }
     function register()
     {
-        return view('singin');
+        return view('front.login');
     }
     function profile()
     {
-        return view('profile');
+        return view('front.profile');
     }
     function member()
     {
-        return view('member');
+        return view('front.member');
     }
 }

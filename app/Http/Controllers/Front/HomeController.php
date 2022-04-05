@@ -1,30 +1,26 @@
 <?php
 
-namespace App\Http\Controllers;
-
-// namespace App\Http\Controllers\Front;
-
 namespace App\Http\Controllers\Front;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //
     function index()
     {
-        return view('index');
+        return view('front.index');
     }
     function aboutUs()
     {
-        return view('about');
+        return view('front.about');
     }
     function ourServices()
     {
-        return view('services');
+        return view('front.services');
     }
     function connectUs()
     {
-        return view('connect');
+        return view('front.connect');
     }
 }

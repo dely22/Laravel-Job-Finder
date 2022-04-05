@@ -1,22 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
-
-
 namespace App\Http\Controllers\Front;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class JobsController extends Controller
 {
-    //
     function index()
     {
-        return view('jobs');
+        return view('front.jobs');
     }
 
     function details()
     {
-        return view('details');
+        return view('front.details');
     }
 }

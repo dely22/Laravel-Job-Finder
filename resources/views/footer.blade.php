@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/boxicons.min.css" rel="stylesheet">
-    <link href="../css/footer.css" rel="stylesheet">
-    <title>footer</title>
-</head>
-<body>
-    
-    <footer id="footer">
+ <footer id="footer" class="mt-7">
     <div class="footer-newsletter">
         <div class="container">
             <div class="row">
@@ -65,9 +51,4 @@
         <div class="copyright"> © Copyright <strong><span>Job Finder</span></strong>. All Rights Reserved </div>
         <div class="credits"> Designed by <a href="#" class="btn-outline-dark text-white">Hadeel Jameel</a> </div>
     </div>
-    </footer>
-
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/jquery.min.js"></script>
-</body>
-</html>
+</footer>

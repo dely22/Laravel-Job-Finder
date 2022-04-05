@@ -22,49 +22,50 @@
             <span class="navbar-toggler-icon"></span>
           </button>
       </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="{{route('index')}}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('jobs')}}">Jobs</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="{{route('services')}}">Services</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="{{route('about')}}">About us</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="{{route('connect')}}">Connect Us</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link active" href="{{route('companies')}}">Companies</a>
-          </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../user/{{route('member')}}">{{route('member')}}s</a>
+            <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Ar</a>
+            <a class="nav-link" href="{{ route('jobs') }}">Jobs</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="{{ route('ourServices') }}">Services</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="{{ route('aboutUs') }}">About us</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="{{ route('connectUs') }}">Connect Us</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="{{ route('member') }}">Members</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="{{ route('companies') }}">Partnars </a>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Profile 
+              Profile
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ModalForm">LogIn</a></li>
-              <li><a class="dropdown-item" href="#"data-bs-toggle="modal" data-bs-target="#SignForm">Sign Up</a></li>
+              <li><a class="dropdown-item" href="{{ route('login') }}" data-bs-toggle="modal" data-bs-target="#ModalForm">LogIn</a></li>
+              <li><a class="dropdown-item" href="{{ route('register') }}"data-bs-toggle="modal" data-bs-target="#SignForm">Sign Up</a></li>
             </ul>
           </li>
-        
+
+           <li class="nav-item">
+            <a class="nav-link" href="#">Ar</a>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
 
-   <!-- LogIn Modal -->
+ <!-- LogIn Modal -->
   <section class="modal fade" id="ModalForm" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -85,16 +86,16 @@
                   <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
               </div>
               <div class="mb-3">
-                  <input class="form-check-input" type="checkbox" value="" id="re{{route('member')}}" required>
-                  <label class="form-check-label" for="re{{route('member')}}">Re{{route('member')}} Me</label>
+                  <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                  <label class="form-check-label" for="remember">Remember Me</label>
                   <a href="#" class="float-end">Forgot Password</a>
               </div>
             </div>
-            <div class="modal-footer pt-4">                  
-              <a href="../user/profile.html" type="button" class="btn btn-dark mx-auto w-100">Login</a>
+            <div class="modal-footer pt-4">
+              <a href="{{ route('profile') }}" type="button" class="btn btn-dark mx-auto w-100">Login</a>
             </div>
             <p class="text-center">Not yet account, <a href="#" data-bs-toggle="modal" data-bs-target="#SignForm"
-            data-bs-dismiss="modal" >Signup</a></p> 
+            data-bs-dismiss="modal" >Signup</a></p>
         </form>
       </div>
     </div>
@@ -106,7 +107,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <form action="" class="mt-5 border p-4 bg-light shadow">
-                <div class="modal-header">
+                <div class="modal-header"></div>
                   <h5 class="modal-title">Create Your Account</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -130,7 +131,7 @@
                           <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
                       </div>
                       <div class="col-md-12">
-                          <a href="../user/profile.html" type="button"
+                          <a href="{{ route('profile') }}" type="button"
                           class="btn btn-dark mx-auto w-100">Signup Now</a>
                   </div>
               </div>
@@ -141,7 +142,6 @@
       </div>
     </div>
   </section>
-
     <!-- companies & Partners -->
     <section class="container d-flex align-items-center justify-content-start py-5 my-5">
       <div class="row">
@@ -155,7 +155,7 @@
             A Greate Company that .. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dolore?
           </p>
         </div>
-        
+
         <div class="col-lg-4"
           style=" display: flex; justify-content: center; align-items: center;  flex-direction: column; gap: 10px;">
           <img src="../assets/img/logos/ibm.svg"
@@ -165,7 +165,7 @@
             A Greate Company that .. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dolore?
           </p>
         </div>
-        
+
         <div class="col-lg-4"
           style=" display: flex; justify-content: center; align-items: center;  flex-direction: column; gap: 10px;">
           <img src="../assets/img/logos/github-2x1-1.svg"
@@ -178,7 +178,7 @@
 
       </div>
     </section>
-   
+
 
 
 

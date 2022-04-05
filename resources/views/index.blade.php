@@ -5,43 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Searcher</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/lastjobs.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/lastjobs.css" rel="stylesheet">
 
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/boxicons.min.css" rel="stylesheet">
-    <link href="../css/footer.css" rel="stylesheet">
-    <link href="../css/adv.css" rel="stylesheet">
-    <link href="../css/lastjob.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/boxicons.min.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="/css/adv.css" rel="stylesheet">
+    <link href="/css/lastjob.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-      <!-- Navigation-->
-      <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-          <div class="container">
-              <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                  Menu
-                  <i class="fas fa-bars ms-1"></i>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                  <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                      <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                  </ul>
-              </div>
-          </div>
-      </nav> -->
-      <!-- Masthead-->
-      <!-- <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Welcome To Our Studio!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
-            </div>
-        </header> -->
 
   <!-- nav -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top text-white">
@@ -55,41 +28,41 @@
       <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/{{route('jobs')}}">Jobs</a>
+            <a class="nav-link" href="{{ route('jobs') }}">Jobs</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="/{{route('services')}}">Services</a>
+            <a class="nav-link" href="{{ route('ourServices') }}">Services</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="/{{route('about')}}">About us</a>
+            <a class="nav-link" href="{{ route('aboutUs') }}">About us</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="/{{route('connect')}}">Connect Us</a>
+            <a class="nav-link" href="{{ route('connectUs') }}">Connect Us</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="user/{{route('member')}}">{{route('member')}}s</a>
+            <a class="nav-link" href="{{ route('member') }}">Members</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="/{{route('companies')}}">Partnars </a>
-          </li>       
+            <a class="nav-link" href="{{ route('companies') }}">Partnars </a>
+          </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Profile 
+              Profile
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ModalForm">LogIn</a></li>
-              <li><a class="dropdown-item" href="#"data-bs-toggle="modal" data-bs-target="#SignForm">Sign Up</a></li>
+              <li><a class="dropdown-item" href="{{ route('login') }}" data-bs-toggle="modal" data-bs-target="#ModalForm">LogIn</a></li>
+              <li><a class="dropdown-item" href="{{ route('register') }}"data-bs-toggle="modal" data-bs-target="#SignForm">Sign Up</a></li>
             </ul>
           </li>
 
            <li class="nav-item">
             <a class="nav-link" href="#">Ar</a>
           </li>
-        
+
         </ul>
       </div>
     </div>
@@ -116,16 +89,16 @@
                   <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
               </div>
               <div class="mb-3">
-                  <input class="form-check-input" type="checkbox" value="" id="re{{route('member')}}" required>
-                  <label class="form-check-label" for="re{{route('member')}}">Re{{route('member')}} Me</label>
+                  <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                  <label class="form-check-label" for="remember">Remember Me</label>
                   <a href="#" class="float-end">Forgot Password</a>
               </div>
             </div>
-            <div class="modal-footer pt-4">                  
-              <a href="user/profile.html" type="button" class="btn btn-dark mx-auto w-100">Login</a>
+            <div class="modal-footer pt-4">
+              <a href="{{ route('profile') }}" type="button" class="btn btn-dark mx-auto w-100">Login</a>
             </div>
             <p class="text-center">Not yet account, <a href="#" data-bs-toggle="modal" data-bs-target="#SignForm"
-            data-bs-dismiss="modal" >Signup</a></p> 
+            data-bs-dismiss="modal" >Signup</a></p>
         </form>
       </div>
     </div>
@@ -137,7 +110,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <form action="" class="mt-5 border p-4 bg-light shadow">
-                <div class="modal-header">
+                <div class="modal-header"></div>
                   <h5 class="modal-title">Create Your Account</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -161,7 +134,7 @@
                           <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
                       </div>
                       <div class="col-md-12">
-                          <a href="user/profile.html" type="button"
+                          <a href="{{ route('profile') }}" type="button"
                           class="btn btn-dark mx-auto w-100">Signup Now</a>
                   </div>
               </div>
@@ -216,21 +189,21 @@
   <!-- <div class="col-lg-4 col-sm-11 card border-1 px-5 py-3 ">
       <div class="card border-1 px-5 py-3 " style="border:1px  solid red;">
           <div class="text-center text-danger"> Hurry Up </div>
-          <div class="text-center mt-2 p-3"> 
-              <img src="assets/img/logos/ibm.svg" width="100" /> 
+          <div class="text-center mt-2 p-3">
+              <img src="assets/img/logos/ibm.svg" width="100" />
               <span class="d-block font-weight-bold ">Programmer</span>
-              <hr class="text-danger"> 
+              <hr class="text-danger">
               <span>IBM Inc</span>
-              <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i> 
-                <small class="ml-1 text-primary">FreeLancer</small> 
+              <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i>
+                <small class="ml-1 text-primary">FreeLancer</small>
               </div>
-              <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                <a class="btn btn-sm btn-outline-danger mt-3">Apply Now</a> 
+              <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
+                <a class="btn btn-sm btn-outline-danger mt-3">Apply Now</a>
               </div>
           </div>
       </div> -->
 
-    
+
 
   <!-- last jobs -->
    <section class="container mt-4 mb-2">
@@ -242,16 +215,16 @@
           <div class="col-lg-4 col-md-10 mb-2">
               <div class="card p-3 mb-2">
                   <div class="text-center text-danger"> Hurry Up </div>
-                  <div class="text-center mt-2 p-3"> 
-                      <img src="assets/img/logos/ibm.svg" width="100" /> 
+                  <div class="text-center mt-2 p-3">
+                      <img src="assets/img/logos/ibm.svg" width="100" />
                       <span class="d-block font-weight-bold ">Programmer</span>
-                      <hr class="text-danger"> 
+                      <hr class="text-danger">
                       <span>IBM Inc</span>
-                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i> 
-                          <small class="ml-1 text-primary">FreeLancer</small> 
+                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i>
+                          <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
-                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                            <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
+                            <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -261,16 +234,16 @@
           <div class="col-lg-4 col-md-11">
               <div class="card p-3 mb-2">
                   <div class="text-center text-danger"> Hurry Up </div>
-                  <div class="text-center mt-2 p-3"> 
-                      <img src="assets/img/logos/ibm.svg" width="100" /> 
+                  <div class="text-center mt-2 p-3">
+                      <img src="assets/img/logos/ibm.svg" width="100" />
                       <span class="d-block font-weight-bold ">Programmer</span>
-                      <hr class="text-danger"> 
+                      <hr class="text-danger">
                       <span>IBM Inc</span>
-                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i> 
-                          <small class="ml-1 text-primary">FreeLancer</small> 
+                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i>
+                          <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
-                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                         <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
+                         <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -280,37 +253,37 @@
           <div class="col-lg-4 col-md-11">
               <div class="card p-3 mb-2">
                   <div class="text-center text-danger"> Hurry Up </div>
-                  <div class="text-center mt-2 p-3"> 
-                      <img src="assets/img/logos/ibm.svg" width="100" /> 
+                  <div class="text-center mt-2 p-3">
+                      <img src="assets/img/logos/ibm.svg" width="100" />
                       <span class="d-block font-weight-bold ">Programmer</span>
-                      <hr class="text-danger"> 
+                      <hr class="text-danger">
                       <span>IBM Inc</span>
-                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i> 
-                          <small class="ml-1 text-primary">FreeLancer</small> 
+                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i>
+                          <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
-                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                         <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
+                         <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
               </div>
           </div>
-      </div>  
+      </div>
       <div class="row">
           <!-- card -->
           <div class="col-lg-4 col-md-10 mb-2">
               <div class="card p-3 mb-2">
                   <div class="text-center text-danger"> Hurry Up </div>
-                  <div class="text-center mt-2 p-3"> 
-                      <img src="assets/img/logos/ibm.svg" width="100" /> 
+                  <div class="text-center mt-2 p-3">
+                      <img src="assets/img/logos/ibm.svg" width="100" />
                       <span class="d-block font-weight-bold ">Programmer</span>
-                      <hr class="text-danger"> 
+                      <hr class="text-danger">
                       <span>IBM Inc</span>
-                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i> 
-                          <small class="ml-1 text-primary">FreeLancer</small> 
+                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i>
+                          <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
-                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                    <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
+                    <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -320,16 +293,16 @@
           <div class="col-lg-4 col-md-11">
               <div class="card p-3 mb-2">
                   <div class="text-center text-danger"> Hurry Up </div>
-                  <div class="text-center mt-2 p-3"> 
-                      <img src="assets/img/logos/ibm.svg" width="100" /> 
+                  <div class="text-center mt-2 p-3">
+                      <img src="assets/img/logos/ibm.svg" width="100" />
                       <span class="d-block font-weight-bold ">Programmer</span>
-                      <hr class="text-danger"> 
+                      <hr class="text-danger">
                       <span>IBM Inc</span>
-                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i> 
-                          <small class="ml-1 text-primary">FreeLancer</small> 
+                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i>
+                          <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
-                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                             <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
+                             <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -339,23 +312,23 @@
           <div class="col-lg-4 col-md-11">
               <div class="card p-3 mb-2">
                   <div class="text-center text-danger"> Hurry Up </div>
-                  <div class="text-center mt-2 p-3"> 
-                      <img src="assets/img/logos/ibm.svg" width="100" /> 
+                  <div class="text-center mt-2 p-3">
+                      <img src="assets/img/logos/ibm.svg" width="100" />
                       <span class="d-block font-weight-bold ">Programmer</span>
-                      <hr class="text-danger"> 
+                      <hr class="text-danger">
                       <span>IBM Inc</span>
-                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i> 
-                          <small class="ml-1 text-primary">FreeLancer</small> 
+                      <div class="d-flex flex-row align-items-center justify-content-center"> <i class="fa fa-map-marker"></i>
+                          <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
-                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span> 
-                          <a href="/{{route('jobs')}}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a> 
+                      <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
+                          <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
               </div>
           </div>
-      </div> 
-      
+      </div>
+
     </section>
 
   <!--  partners -->
@@ -403,7 +376,7 @@
                           <img src="assets/img/logos/facebook.svg" alt="" width="150">
                           <img src="assets/img/logos/ibm.svg" alt="" width="150">
                       </div>
-                     
+
                   </div>
               </div>
               <div class="carousel-indicators">
@@ -419,7 +392,7 @@
 
 
 
-  
+
 
   <!-- Footer -->
  <footer id="footer" class="mt-7">
@@ -475,13 +448,13 @@
         <div class="copyright"> © Copyright <strong><span>Job Finder</span></strong>. All Rights Reserved </div>
         <div class="credits"> Designed by <a href="#" class="btn-outline-dark text-white">Hadeel Jameel</a> </div>
     </div>
-  </footer>
+</footer>
 
 
 
 
   <script src="js/bootstrap.bundle.min.js"></script>
-  
+
   <script src="js/app.js"></script>
   <script src="js/jquery.min.js"></script>
 </body>

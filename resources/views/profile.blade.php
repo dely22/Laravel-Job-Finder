@@ -11,14 +11,14 @@
     <link href="../css/footer.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet"/>
     <style>
-      
+
                .text-secondary{
                   color: rgb(121, 126, 197);
                }
                 .text-prof{
                     color: rgb(110, 115, 192);
                 }
-      
+
     </style>
 </head>
 <body class="bg-light" style="color: rgb(102, 62, 96);">
@@ -27,21 +27,21 @@
         <div class="row mx-1 bg-white my-3 col-12 d-flex justify-content-lg-between shadow">
             <nav aria-label="breadcrumb" class="main-breadcrumb col-6 p-3">
               <ol class="breadcrumb ms-3" >
-                <li class="breadcrumb-item fs-6 fw-bold"><a href="{{route('index')}}">Home</a></li>
+                <li class="breadcrumb-item fs-6 fw-bold"><a href="{{ route('home') }}">Home</a></li>
                 <li class="breadcrumb-item active fs-6 fw-bold" aria-current="page"> Profile</li>
               </ol>
-              
+
             </nav>
             <div class="nav-item dropdown col-6  p-2 d-flex justify-content-end">
                 <a class="nav-link dropdown-toggle fs-6 fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Hadeel Jameel 
+                Hadeel Jameel
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item fs-6 fw-bold" href="{{route('member')}}">See {{route('member')}}s</a></li>
-                <li><a class="dropdown-item fs-6 fw-bold" href="{{route('index')}}">LogOut</a></li>
+                <li><a class="dropdown-item fs-6 fw-bold" href="{{ route('member') }}">See Members</a></li>
+                <li><a class="dropdown-item fs-6 fw-bold" href="{{ route('home') }}">LogOut</a></li>
                 </ul>
               </div>
-           
+
         </div>
          <!-- top nav end -->
 
@@ -54,9 +54,9 @@
                 <div class="col-12 d-flex justify-content-center align-items-center p-4 position-relative">
                 <img src="../img/nizuoo.jpg"
                     class="user-avatar img-fluid rounded-circle"
-                    alt="user avatar"style="width: 70%;"/>  
+                    alt="user avatar"style="width: 70%;"/>
                 <a role="button" data-bs-toggle="modal"data-bs-target="#avatar-edit-model"
-                        class="position-absolute bg-white border border-primary rounded d-flex justify-content-center align-items-lg-center rounded-circle" 
+                        class="position-absolute bg-white border border-primary rounded d-flex justify-content-center align-items-lg-center rounded-circle"
                         style="bottom: 10%;left: 35%; width: 30px;height: 30px;">
                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square " viewBox="0 0 16 16">
                       <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -125,16 +125,16 @@
                 <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
                   <h3 class="fw-bold text-prof">Info</h3>
                   <a role="button" data-bs-toggle="modal"data-bs-target="#edit-info"
-                        class="  border border-primary rounded d-flex justify-content-center align-items-lg-center rounded-circle" 
+                        class="  border border-primary rounded d-flex justify-content-center align-items-lg-center rounded-circle"
                         style="bottom: 10%;left: 35%; width: 30px;height: 30px;">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                       class="bi bi-pencil-square " viewBox="0 0 16 16">
                       <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                       <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                     </svg>
                 </a>
-                 
-                
+
+
                 </div>
 
                 <div class="card-body">
@@ -447,7 +447,7 @@
                       </div>
                   </div>
 
-                
+
               </div>
             </section>
 
@@ -517,7 +517,7 @@
                       </div>
                   </div>
 
-                
+
               </div>
             </section>
 
@@ -593,7 +593,7 @@
 
         <div class="modal-body">
           <form class="row g-3">
-            <div class="col-6"> 
+            <div class="col-6">
               <!-- first name -->
               <div class="input-group">
                   <input
@@ -666,7 +666,7 @@
                   value=""
                   />
               </div>
-              </div> 
+              </div>
 
               <!-- Address  -->
               <div class="col-6">
@@ -702,7 +702,7 @@
       </div>
       </div>
     </div>
-      
+
 
     <!-- add skill Modal  -->
     <div
@@ -844,7 +844,7 @@
 
         <div class="modal-body">
           <form class="row g-3">
-            <div class="col-6"> 
+            <div class="col-6">
               <!--  name -->
               <div class="input-group">
                   <input
@@ -874,7 +874,7 @@
               </div>
               </div>
 
-        
+
               <!-- Type edu or cusrs  -->
               <div class="col-6">
               <div class="input-group">
@@ -910,9 +910,9 @@
       </div>
     </div>
 
-    
-    
-    
+
+
+
 
 
 
@@ -925,7 +925,7 @@
 
         $("#wrk,#skil,#Edu,#expe,#curs,#Edpers").hide();
 
-        
+
         });
 
         $("#personal").click(function(){
@@ -971,7 +971,7 @@
         $("#courses").click(function(){
         $("#wrk,#perso,#expe,#skil,#Edu,#Edpers").hide();
         $("#curs").show();
-        
+
         });
     </script>
 

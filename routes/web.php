@@ -1,14 +1,11 @@
 <?php
 
-use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Front;
+// use App\Http\Controllers\Front;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\CompaniesController;
 use App\Http\Controllers\Front\JobsController;
-use App\Http\Controllers\UsersController;
-
+use App\Http\Controllers\Front\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

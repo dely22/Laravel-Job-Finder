@@ -62,63 +62,74 @@
 
 
     <ul class="menu-inner py-1">
-        <!-- jobs -->
+
+         <!-- Messages -->
         <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Jobs </span>
+            <span class="menu-header-text">Messages </span>
+        </li>
+        <li class="menu-item">
+            <a href="{{ route('Messages') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-message"></i>
+                <div data-i18n="Messages">Show list</div>
+            </a>
+        </li>
+
+        {{-- Show All Sections --}}
+         <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Show Data </span>
         </li>
         <li class="menu-item">
             <a href="{{ route('Jobs') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
+                <i class="menu-icon tf-icons bx bxs-show"></i>
                 <div data-i18n="Jobs">Show list</div>
             </a>
-             <a href="{{ route('newJob') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div data-i18n="Add Job">Add Job</div>
-            </a>
-        </li>
-        <!-- compenies -->
-        <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Partners </span>
-        </li>
-        <li class="menu-item">
             <a href="{{ route('Companies') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
+                <i class="menu-icon tf-icons bx bxs-show"></i>
                 <div data-i18n="Partners">Show list</div>
             </a>
-              <a href="{{ route('newCompany') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div data-i18n="Add Partner">Add Partner</div>
-            </a>
-        </li>
-        <!-- Services -->
-        <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Services </span>
-        </li>
-        <li class="menu-item">
-             <a href="{{ route('Services') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
+            <a href="{{ route('Services') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-show"></i>
                 <div data-i18n="Services">Show list</div>
             </a>
-              <a href="{{ route('newService') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div data-i18n="Add Service">Add Service</div>
+            <a href="{{ route('About') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-show"></i>
+                <div data-i18n="About Us">Show list</div>
             </a>
-        </li>
-          <!-- Ads -->
-        <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Ads </span>
-        </li>
-        {{-- {{ route('Ads') }} --}}
-        <li class="menu-item">
-             <a href="{{ route('Ads') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
+            <a href="{{ route('Ads') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-show"></i>
                 <div data-i18n="Ads">Show list</div>
             </a>
-              <a href="{{ route('newAds') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div data-i18n="Add Ads">Add Service</div>
-            </a>
+
         </li>
+             {{-- Add Date For All Sections --}}
+         <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Insert Data </span>
+        </li>
+        <li class="menu-item">
+            <a href="{{ route('newJob') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-add-to-queue"></i>
+                <div data-i18n="New Job">New Job</div>
+            </a>
+            <a href="{{ route('newCompany') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-add-to-queue"></i>
+                <div data-i18n="New Partner">New Partner</div>
+            </a>
+             <a href="{{ route('newService') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-add-to-queue"></i>
+                <div data-i18n="New Service">New Service</div>
+            </a>
+            <a href="{{ route('newAbout') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-show"></i>
+                <div data-i18n="New About">Show list</div>
+            </a>
+            <a href="{{ route('newAds') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-add-to-queue"></i>
+                <div data-i18n="New Ads">New Ads</div>
+            </a>
+
+        </li>
+
+
 
 
     </ul>

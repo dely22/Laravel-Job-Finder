@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Admin\JobController;
 use App\Http\Controllers\Admin\DashController;
+use App\Http\Controllers\Admin\MessagesController;
 use App\Http\Controllers\Admin\ServicesController;
 
 
@@ -20,13 +21,13 @@ use App\Http\Controllers\Admin\ServicesController;
 */
 
 Route::get('/admin', function () {
-    return view('index');
+    return view('admin.messages.listMessages');
 });
 
 Route::namespace('Admin')->group(function () {
 
     // JOBS ROUTES
-    Route::get('/admin', [JobController::class, 'index'])->name('Jobs');
+    Route::get('/listJobs', [JobController::class, 'index'])->name('Jobs');
     Route::get('/addJob', [JobController::class, 'add'])->name('newJob');
 
     // COMPANIES ROUTES
@@ -41,5 +42,6 @@ Route::namespace('Admin')->group(function () {
     Route::get('/listAds', [AdsController::class, 'index'])->name('Ads');
     Route::get('/addAds', [AdsController::class, 'add'])->name('newAds');
 
-    //    ROUTES
+    // Messages ROUTES
+    Route::get('/listMessages', [MessagesController::class, 'index'])->name('Messages');
 });

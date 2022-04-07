@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class MessagesController extends Controller
 {
-    //
+    function index()
+    {
+        return view('admin.messages.listMessages');
+    }
 }

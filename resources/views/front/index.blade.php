@@ -23,7 +23,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
-                            <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
+                            <a href="{{ route('jobs') }}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -42,7 +42,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
-                         <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
+                         <a href="{{ route('jobs') }}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -61,7 +61,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
-                         <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
+                         <a href="{{ route('jobs') }}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -82,7 +82,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
-                    <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
+                    <a href="{{ route('jobs') }}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -101,7 +101,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
-                             <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
+                             <a href="{{ route('jobs') }}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>
@@ -120,7 +120,7 @@
                           <small class="ml-1 text-primary">FreeLancer</small>
                       </div>
                       <div class="d-flex flex-column align-content-center mt-2"> <span>$100,000</span>
-                          <a href="pages/jobs.html" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
+                          <a href="{{ route('jobs') }}" class="btn btn-sm text-danger btn-outline-dark mt-3">See More</a>
                           <!-- <a class="btn text-primary mt-3">See More</a>  -->
                       </div>
                   </div>

@@ -3,25 +3,25 @@
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
 
-        <h4 class="fw-bold py-3 mb-2">Add new Partner (Company) </h4>
+        <h4 class="fw-bold py-3 mb-2">Add new Ads </h4>
         <div class="card mb-4">
             {{-- <h5 class="card-header">Add new skill</h5> --}}
             <form class="card-body" action="/save_company" method="POST" enctype="multipart/form-data">
 
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label class="form-label" for="multicol-username">Name </label>
-                  <input name="company_Name" type="text" id="multicol-username" class="form-control" placeholder="Company Name" />
+                  <label class="form-label" for="multicol-username">Title </label>
+                  <input name="ads_Title" type="text" id="multicol-username" class="form-control" placeholder="Ads Title" />
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label" for="multicol-email">Company Logo</label>
+                  <label class="form-label" for="multicol-email">Ads Img</label>
                   <div class="input-group input-group-merge">
-                    <input name="company_Img" type="file" class="form-control" aria-describedby="multicol-email2" />
+                    <input name="ads_Img" type="file" class="form-control" aria-describedby="multicol-email2" />
                   </div>
                 </div>
                  <div class="col-md-6">
-                  <label class="form-label" for="multicol-username">Detailes </label>
-                  <input name="company_Detailes" type="text" id="multicol-username" class="form-control" placeholder="Company Detailes" />
+                  <label class="form-label" for="multicol-username"> Ads Url </label>
+                  <input name="ads_Url" type="text" id="multicol-username" class="form-control" placeholder="Ads Company Url" />
                 </div>
 
                 <div class="col-md-6">

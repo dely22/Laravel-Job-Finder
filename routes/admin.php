@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Admin\JobController;
@@ -24,12 +25,21 @@ Route::get('/admin', function () {
 
 Route::namespace('Admin')->group(function () {
 
+    // JOBS ROUTES
     Route::get('/admin', [JobController::class, 'index'])->name('Jobs');
-    Route::get('/addJob', [JobController::class, 'add'])->name('addJob');
+    Route::get('/addJob', [JobController::class, 'add'])->name('newJob');
 
+    // COMPANIES ROUTES
     Route::get('/listCompany', [DashController::class, 'index'])->name('Companies');
-    Route::get('/addCompany', [DashController::class, 'add'])->name('addCompany');
+    Route::get('/addCompany', [DashController::class, 'add'])->name('newCompany');
 
+    // SERVICES ROUTES
     Route::get('/listServices', [ServicesController::class, 'index'])->name('Services');
-    Route::get('/addService', [ServicesController::class, 'add'])->name('addService');
+    Route::get('/addService', [ServicesController::class, 'add'])->name('newService');
+
+    // ADS ROUTES
+    Route::get('/listAds', [AdsController::class, 'index'])->name('Ads');
+    Route::get('/addAds', [AdsController::class, 'add'])->name('newAds');
+
+    //    ROUTES
 });

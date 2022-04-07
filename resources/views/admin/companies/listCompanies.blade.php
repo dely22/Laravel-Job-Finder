@@ -17,22 +17,11 @@
                                                 type="search" class="form-control" placeholder="Search.."
                                                 aria-controls="DataTables_Table_0"></label></div>
                                 </div>
-                                {{--  --}}
-                                <div class="dt-buttons"><a href='{{ route('addCompany') }}' class="dt-button add-new btn btn-primary mb-3 mb-md-0"
+                                <div class="dt-buttons"><a href='{{ route('newCompany') }}' class="dt-button add-new btn btn-primary mb-3 mb-md-0"
                                     tabindex="0" aria-controls="DataTables_Table_0" data-bs-target="#addPermissionModal"><span>Add
                                         New Partner</span></a> </div>
                             </div>
                         </div>
-                         {{-- <div class="col-sm-12 col-md-3">
-                            <div class="dataTables_length" id="DataTables_Table_0_length"><label><select
-                                        name="DataTables_Table_0_length" aria-controls="DataTables_Table_0"
-                                        class="form-select">
-                                        <option value="10">10</option>
-                                        <option value="25">25</option>
-                                        <option value="50">50</option>
-                                        <option value="100">100</option>
-                                    </select></label></div>
-                        </div> --}}
                     </div>
                     <table class="datatables-permissions table border-top dataTable no-footer dtr-column"
                         id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info"

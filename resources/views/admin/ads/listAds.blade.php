@@ -3,7 +3,7 @@
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
 
-        <h4 class="fw-bold py-3 mb-2"> List Jobs </h4>
+        <h4 class="fw-bold py-3 mb-2">Our Ads </h4>
         <!-- Show Table -->
         <div class="card">
             <div class="card-datatable table-responsive">
@@ -17,10 +17,9 @@
                                                 type="search" class="form-control" placeholder="Search.."
                                                 aria-controls="DataTables_Table_0"></label></div>
                                 </div>
-                                {{--  --}}
-                                <div class="dt-buttons"><a href='{{ route('newJob') }}' class="dt-button add-new btn btn-primary mb-3 mb-md-0"
+                                <div class="dt-buttons"><a href='{{ route('newAds') }}' class="dt-button add-new btn btn-primary mb-3 mb-md-0"
                                     tabindex="0" aria-controls="DataTables_Table_0" data-bs-target="#addPermissionModal"><span>Add
-                                        New Job</span></a> </div>
+                                        New Ads</span></a> </div>
                             </div>
                         </div>
 
@@ -34,31 +33,12 @@
                                     style="width: 68px; display: none;" aria-label=""></th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                     colspan="1" style="width: 168px;" aria-label="Name: activate to sort column ascending">
-                                    Position</th>
-
+                                    Title</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                     colspan="1" style="width: 168px;" aria-label="Name: activate to sort column ascending">
                                     Image</th>
-
-                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-                                    colspan="1" style="width: 168px;" aria-label="Name: activate to sort column ascending">
-                                    AdsState</th>
-
-                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-                                    colspan="1" style="width: 168px;" aria-label="Name: activate to sort column ascending">
-                                    CompanyName</th>
-
-                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-                                    colspan="1" style="width: 168px;" aria-label="Name: activate to sort column ascending">
-                                    Location</th>
-
-                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-                                    colspan="1" style="width: 168px;" aria-label="Name: activate to sort column ascending">
-                                    Salary</th>
-
                                 <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 280px;"
-                                    aria-label="Detailes ">Detailes</th>
-
+                                    aria-label="url ">Url</th>
                                 <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 197px;"
                                     aria-label="Actions">Actions</th>
                             </tr>

@@ -71,23 +71,23 @@
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
                 <div data-i18n="Jobs">Show list</div>
             </a>
-             <a href="{{ route('addJob') }}" class="menu-link">
+             <a href="{{ route('newJob') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
                 <div data-i18n="Add Job">Add Job</div>
             </a>
         </li>
         <!-- compenies -->
         <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Compenies </span>
+            <span class="menu-header-text">Partners </span>
         </li>
         <li class="menu-item">
             <a href="{{ route('Companies') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div data-i18n="Compenies">Show list</div>
+                <div data-i18n="Partners">Show list</div>
             </a>
-              <a href="{{ route('addCompany') }}" class="menu-link">
+              <a href="{{ route('newCompany') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div data-i18n="Add Company">Add Company</div>
+                <div data-i18n="Add Partner">Add Partner</div>
             </a>
         </li>
         <!-- Services -->
@@ -99,7 +99,7 @@
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
                 <div data-i18n="Services">Show list</div>
             </a>
-              <a href="{{ route('addService') }}" class="menu-link">
+              <a href="{{ route('newService') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
                 <div data-i18n="Add Service">Add Service</div>
             </a>
@@ -110,11 +110,11 @@
         </li>
         {{-- {{ route('Ads') }} --}}
         <li class="menu-item">
-             <a href="" class="menu-link">
+             <a href="{{ route('Ads') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
                 <div data-i18n="Ads">Show list</div>
             </a>
-              <a href="{{ route('addService') }}" class="menu-link">
+              <a href="{{ route('newAds') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
                 <div data-i18n="Add Ads">Add Service</div>
             </a>

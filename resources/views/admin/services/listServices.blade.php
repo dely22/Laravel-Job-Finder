@@ -18,7 +18,7 @@
                                                 aria-controls="DataTables_Table_0"></label></div>
                                 </div>
                                 {{--  --}}
-                                <div class="dt-buttons"><a href='{{ route('addService') }}' class="dt-button add-new btn btn-primary mb-3 mb-md-0"
+                                <div class="dt-buttons"><a href='{{ route('newService') }}' class="dt-button add-new btn btn-primary mb-3 mb-md-0"
                                     tabindex="0" aria-controls="DataTables_Table_0" data-bs-target="#addPermissionModal"><span>Add
                                         New Service</span></a> </div>
                             </div>

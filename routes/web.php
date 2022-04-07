@@ -6,6 +6,12 @@ use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\CompaniesController;
 use App\Http\Controllers\Front\JobsController;
 use App\Http\Controllers\Front\UsersController;
+
+// admin
+use App\Http\Controllers\Admin\DashController;
+use App\Http\Controllers\Admin\JobController;
+use App\Http\Controllers\Admin\ServicesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

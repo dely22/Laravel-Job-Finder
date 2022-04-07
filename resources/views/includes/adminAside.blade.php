@@ -118,7 +118,7 @@
                 <i class="menu-icon tf-icons bx bx-add-to-queue"></i>
                 <div data-i18n="New Service">New Service</div>
             </a>
-            <a href="{{ route('newAbout') }}" class="menu-link">
+            <a href="{{ route('newInfo') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-show"></i>
                 <div data-i18n="New About">Show list</div>
             </a>

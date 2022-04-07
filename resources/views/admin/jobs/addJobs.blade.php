@@ -5,7 +5,7 @@
 
         <h4 class="fw-bold py-3 mb-2">Add new Job </h4>
         <div class="card mb-4">
-            {{-- <h5 class="card-header">Add new skill</h5> --}}
+
             <form class="card-body" action="/save_job" method="POST" enctype="multipart/form-data">
 
               <div class="row g-3">

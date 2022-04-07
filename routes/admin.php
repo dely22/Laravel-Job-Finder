@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\AdsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
@@ -26,6 +27,9 @@ Route::get('/admin', function () {
 
 Route::namespace('Admin')->group(function () {
 
+    // Messages ROUTES
+    Route::get('/listMessages', [MessagesController::class, 'index'])->name('Messages');
+
     // JOBS ROUTES
     Route::get('/listJobs', [JobController::class, 'index'])->name('Jobs');
     Route::get('/addJob', [JobController::class, 'add'])->name('newJob');
@@ -38,10 +42,11 @@ Route::namespace('Admin')->group(function () {
     Route::get('/listServices', [ServicesController::class, 'index'])->name('Services');
     Route::get('/addService', [ServicesController::class, 'add'])->name('newService');
 
+    // ABOUT US ROUTES
+    Route::get('/listInfos', [AboutUsController::class, 'index'])->name('About');
+    Route::get('/addInfos', [AboutUsController::class, 'add'])->name('newInfo');
+
     // ADS ROUTES
     Route::get('/listAds', [AdsController::class, 'index'])->name('Ads');
     Route::get('/addAds', [AdsController::class, 'add'])->name('newAds');
-
-    // Messages ROUTES
-    Route::get('/listMessages', [MessagesController::class, 'index'])->name('Messages');
 });

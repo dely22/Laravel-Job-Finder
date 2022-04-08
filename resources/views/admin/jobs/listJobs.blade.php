@@ -42,7 +42,7 @@
 
                                  <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                     colspan="1" style="width: 168px;" aria-label="Name: activate to sort column ascending">
-                                    AdsState</th>
+                                    is_active</th>
 
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                     colspan="1" style="width: 168px;" aria-label="Name: activate to sort column ascending">

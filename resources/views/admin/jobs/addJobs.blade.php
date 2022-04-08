@@ -10,7 +10,7 @@
 
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label class="form-label" for="multicol-username">Name </label>
+                  <label class="form-label" for="multicol-username">Postion </label>
                   <input name="company_Name" type="text" id="multicol-username" class="form-control" placeholder="job Name" />
                 </div>
                 <div class="col-md-6">
@@ -21,6 +21,14 @@
                 </div>
                  <div class="col-md-6">
                   <label class="form-label" for="multicol-username">Detailes </label>
+                  <input name="company_Detailes" type="text" id="multicol-username" class="form-control" placeholder="Compani Detailes" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="multicol-username">Salary </label>
+                  <input name="company_Detailes" type="text" id="multicol-username" class="form-control" placeholder="Compani Detailes" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="multicol-username">Location </label>
                   <input name="company_Detailes" type="text" id="multicol-username" class="form-control" placeholder="Compani Detailes" />
                 </div>
 

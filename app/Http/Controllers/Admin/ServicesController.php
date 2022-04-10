@@ -4,75 +4,171 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\service as ModelsService;
-use Illuminate\Contracts\Validation\Validator;
+// use Illuminate\Contracts\Validation\Validator;
+
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 use Illuminate\Validation\ValidationRequired;
 
 class ServicesController extends Controller
 {
-    function index()
+
+    public function index()
     {
-        return view('admin.services.listServices');
+        $services = ModelsService::orderBy('id', 'desc')->get();
+        return view('admin.services.listServices')
+            ->with('ModelsService', $services);
     }
-    function add()
+    public function create()
     {
         return view('admin.services.addService');
     }
-    function store(Request $request)
+    public function edit($serv_id)
     {
-        // validate data
+        $service = ModelsService::find($serv_id);
+        return view('admin.services.editServices')
+            ->with('ModelsService', $service);
+    }
+    public function toggle($serv_id)
+    {
 
-        // $rules = $this->getRules();
-        // $messages = $this->getMessages();
-
-        // $Validator = Validator::validate($request->all(), $rules, $messages);
-        // if ($Validator) {
-        //     return $Validator->errors()->first();
-        // }
-
-
-        //insert
-        ModelsService::create([
-            // $image = $request->service_Icon,
-
-            // $iconName = time() . '.' . $image->getClientOriginalExtension(),
-            // $request->service_Icon->move('upload', $iconName),
-            // $file_name = $this->saveImage($request->service_Icon, 'upload'),
-
-            $file = $request->file('service_Icon'),
-            $filename = 'service_Icon-' . time() . '.' . $file->getClientOriginalExtension(),
-            $request->service_Icon->move('upload', $filename),
-            // $path = $file->storeAs('public', $filename),
-            // dd($path),
+        $serv = ModelsService::find($serv_id);
+        $serv->is_active *= -1;
+        /*if($serv->is_active==0)
+        $serv->is_active=1;
+        else
+        $serv->is_active=0;*/
+        if ($serv->save())
+            return back()->with(['success' => 'data updated successful']);
+        return back()->with(['error' => 'can not update data']);
+    }
+    public function store(Request $request)
+    {
+        Validator::validate($request->all(), [
+            // 'name_ar' => ['required', 'min:5', 'max:20'],
+            'name' => ['required', 'min:5', 'max:20']
 
 
-            //insert  table offers in database
-            'name' => $request->service_Name,
-            'icon' => $request->$filename,
-            'is_active' => $request->is_active,
+        ], [
+            // 'name_ar.required' => 'this field is required',
+            // 'name_ar.min' => 'can not be less than 5 letters',
+            // 'name_ar.max' => 'can not be greater than 20 letters',
+
+            'name.required' => 'this field is required',
+            'name.min' => 'can not be less than 5 letters',
+            'name.max' => 'can not be greater than 20 letters',
+
 
         ]);
-        $s = new ModelsService();
-        $s->name = $request->service_Name;
-        return redirect()->route('store_service')
-            ->with(['success' => 'user created successful']);
-        return back()->with(['error' => 'can not create user']);
-        return 'save sucssucefuly';
+
+        $new_serv = new ModelsService();
+        // $new_serv->name_ar = $request->name_ar;
+        $new_serv->name = $request->name;
+        $new_serv->is_active = $request->is_active;
+        $new_serv->icon = $request->hasFile('image') ? $this->uploadFile($request->file('image')) : "default_Service.png";
+        if ($new_serv->save())
+            return redirect()->route('Services')->with(['success' => 'data inserted successful']);
+        return redirect()->back()->with(['error' => 'can not add data ']);
     }
-    protected function getRules()
+    public function update(Request $request, $serv_id)
     {
-        return $rules = [
-            'name' => 'require|max=100|unique:services,name',
-            'icon' => 'require'
-        ];
+        $serv = ModelsService::find($serv_id);
+        // $serv->name_ar = $request->name_ar;
+        $serv->name = $request->name;
+        $serv->is_active = $request->is_active;
+        if ($request->hasFile('image'))
+            $serv->icon = $this->uploadFile($request->file('image'));
+        if ($serv->save())
+            return redirect()->route('listServices')->with(['success' => 'data updated successful']);
+        return redirect()->back()->with(['error' => 'can not update data ']);
     }
-    protected function getMessages()
+
+
+
+
+    public function uploadFile($file)
     {
-        return  $messages = [
-            'name.require' => 'this failed is requier',
-            'name.unique' => 'this failed is alrady exist ',
-            'name.max' => 'this failed shoulde be less than 100 letter'
-        ];
+        $dest = public_path() . "/upload/";
+
+        //$file = $request->file('image');
+        $filename = time() . "_" . $file->getClientOriginalName();
+        $file->move($dest, $filename);
+        return $filename;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // function store(Request $request)
+    // {
+
+    // validate data
+
+    // $rules = $this->getRules();
+    // $messages = $this->getMessages();
+
+    // $Validator = Validator::validate($request->all(), $rules, $messages);
+    // if ($Validator) {
+    //     return $Validator->errors()->first();
+    // }
+
+
+    //insert
+    //     ModelsService::create([
+    //         // $image = $request->service_Icon,
+
+    //         // $iconName = time() . '.' . $image->getClientOriginalExtension(),
+    //         // $request->service_Icon->move('upload', $iconName),
+    //         // $file_name = $this->saveImage($request->service_Icon, 'upload'),
+
+    //         $file = $request->file('service_Icon'),
+    //         $filename = 'service_Icon-' . time() . '.' . $file->getClientOriginalExtension(),
+    //         $request->service_Icon->move('upload', $filename),
+    //         // $path = $file->storeAs('public', $filename),
+    //         // dd($path),
+
+
+    //         //insert  table offers in database
+    //         'name' => $request->service_Name,
+    //         'icon' => $request->$filename,
+    //         'is_active' => $request->is_active,
+
+    //     ]);
+    //     $s = new ModelsService();
+    //     $s->name = $request->service_Name;
+    //     return redirect()->route('store_service')
+    //         ->with(['success' => 'user created successful']);
+    //     return back()->with(['error' => 'can not create user']);
+    //     return 'save sucssucefuly';
+    // }
+    // protected function getRules()
+    // {
+    //     return $rules = [
+    //         'name' => 'require|max=100|unique:services,name',
+    //         'icon' => 'require'
+    //     ];
+    // }
+    // protected function getMessages()
+    // {
+    //     return  $messages = [
+    //         'name.require' => 'this failed is requier',
+    //         'name.unique' => 'this failed is alrady exist ',
+    //         'name.max' => 'this failed shoulde be less than 100 letter'
+    //     ];
+    // }
 }

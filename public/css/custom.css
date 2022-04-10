@@ -4,6 +4,9 @@ body {
     font-family: montserrat;
 }
 
+section {
+    margin-top: 0;
+}
 
 /*!
 * Start Bootstrap - Agency v7.0.10 (https://startbootstrap.com/theme/agency)

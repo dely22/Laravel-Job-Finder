@@ -5,8 +5,8 @@
 
         <h4 class="fw-bold py-3 mb-2">Add new Service </h4>
         <div class="card mb-4">
-            <form class="card-body" action="/save_service" method="POST" enctype="multipart/form-data">
-
+            <form class="card-body" action="{{ route('store_service') }}" method="POST" enctype="multipart/form-data">
+                @csrf
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label" for="multicol-username">Service </label>

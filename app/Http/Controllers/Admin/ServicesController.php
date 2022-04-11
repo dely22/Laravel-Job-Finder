@@ -20,6 +20,12 @@ class ServicesController extends Controller
         return view('admin.services.listServices')
             ->with('Service', $services);
     }
+    function ourServices()
+    {
+        $services = Service::orderBy('id', 'desc')->get();
+        return view('front.services')
+            ->with('Service', $services);
+    }
     public function create()
     {
         return view('admin.services.addService');

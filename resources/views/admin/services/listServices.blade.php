@@ -48,6 +48,46 @@
                         </tbody>
                     </table>
                     <div class="row mx-2">
+
+                        @foreach ($services as $service)
+
+         <tr>
+           <td>{{ $loop->iteration }}</td>
+          <td>{{ $service->id }}</td>
+          <td>{{ $service->name }}</td>
+          <td>
+              <ul class="list-unstyled categorys-list m-0 avatar-group d-flex align-items-center">
+
+              <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Christina Parker">
+                <img src="{{ $service->icon }}" alt="Avatar" class="rounded-circle">
+              </li>
+            </ul>
+
+          </td>
+          <td>
+            @if($category->is_active==1)
+            <span class="badge bg-label-success me-1">مفعل</span>
+
+            @else
+            <span class="badge bg-label-danger me-1">موقف</span>
+            @endif
+
+        </td>
+
+            <td>
+            <div class="dropdown">
+              <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ route('edit_service',$service->id) }}"><i class="bx bx-edit-alt me-2"></i> Edit</a>
+                <a class="dropdown-item" href="{{ route('toggle_service',$service->id) }}"><i class="bx bx-trash me-2"></i> @if($service->is_active==1)disable @else enable @endif</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+         @endforeach
+          <td>
+
                         <div class="col-sm-12 col-md-6">
                             <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">
                                 Showing 0 to 0 of 0 Entries</div>

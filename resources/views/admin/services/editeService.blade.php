@@ -3,7 +3,7 @@
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
 
-        <h4 class="fw-bold py-3 mb-2">Add new Service </h4>
+        <h4 class="fw-bold py-3 mb-2">Edit Service {{ $Service->name }} </h4>
         <div class="card mb-4">
          @if ($errors->any())
             @foreach ($errors->all() as $err)
@@ -11,12 +11,12 @@
             @endforeach
           @endif
 
-            <form class="card-body" action="{{ route('update_service') }}" method="POST" enctype="multipart/form-data">
+            <form class="card-body" action="{{ route('update_service',$Service->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label" for="multicol-username">Service </label>
-                  <input name="name" type="text" id="multicol-username" class="form-control" value="{{ $service->name }}" />
+                  <input name="name" type="text" id="multicol-username" class="form-control" value="{{ $Service->name }}" />
                 </div>
                 <div class="col-md-6">
                   <label class="form-label" for="multicol-email">Service Icon</label>
@@ -31,8 +31,8 @@
                 <div class="col-sm-9">
                   <select  name="is_active" id="formtabs-country" class="select2 form-select" data-allow-clear="true">
 
-                    <option @if($category->is_active==1) selected @endif value="1">مفعل</option>
-                    <option  @if($category->is_active==-1) selected @endif value="-1">معطل</option>
+                    <option @if($Service->is_active==1) selected @endif value="1">On</option>
+                    <option  @if($Service->is_active==-1) selected @endif value="-1">Off</option>
                   </select>
                 </div>
               </div>
@@ -42,7 +42,7 @@
 
 
               <div class="pt-4">
-                <button type="submit" class="btn btn-primary me-sm-3 me-1">Add</button>
+                <button type="submit" class="btn btn-primary me-sm-3 me-1">Edite</button>
                 <button type="reset" class="btn btn-label-secondary">Cancele</button>
               </div>
             </form>

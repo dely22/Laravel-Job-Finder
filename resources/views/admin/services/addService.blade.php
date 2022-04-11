@@ -15,7 +15,7 @@
                 <div class="col-md-6">
                   <label class="form-label" for="multicol-email">Service Icon</label>
                   <div class="input-group input-group-merge">
-                    <input name="service_Icon" type="file" class="form-control" aria-describedby="multicol-email2" />
+                    <input name="icon" type="file" class="form-control" aria-describedby="multicol-email2" />
                   </div>
                 </div>
 
@@ -25,8 +25,8 @@
                     <div class="col-sm-9">
                     <select  name="is_active" id="formtabs-country" class="select2 form-select" data-allow-clear="true">
 
-                        <option value="1">مفعل</option>
-                        <option value="-1">معطل</option>
+                        <option value="1">On</option>
+                        <option value="-1">Off</option>
                     </select>
                     </div>
                 </div>

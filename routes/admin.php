@@ -25,6 +25,8 @@ Route::get('/admin', function () {
     return view('admin.messages.listMessages');
 });
 
+// Route::group(['prefix'=>'users','middleware'=> 'auth'], function () {});
+
 Route::namespace('Admin')->group(function () {
 
     // Messages ROUTES
@@ -41,6 +43,8 @@ Route::namespace('Admin')->group(function () {
     // SERVICES ROUTES
     Route::get('/listServices', [ServicesController::class, 'index'])->name('Services');
     Route::get('/addService', [ServicesController::class, 'add'])->name('newService');
+    Route::post('/store_service', [ServicesController::class, 'store'])->name('store_service');
+
 
     // ABOUT US ROUTES
     Route::get('/listInfos', [AboutUsController::class, 'index'])->name('About');

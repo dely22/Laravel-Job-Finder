@@ -42,8 +42,14 @@ Route::namespace('Admin')->group(function () {
 
     // SERVICES ROUTES
     Route::get('/listServices', [ServicesController::class, 'index'])->name('Services');
-    Route::get('/addService', [ServicesController::class, 'add'])->name('newService');
+    Route::get('/addService', [ServicesController::class, 'create'])->name('newService');
+    Route::get('/edit_service/{serv_id}', [ServicesController::class, 'edit'])->name('edit_service');
+    Route::get('/toggle_category/{cat_id}', [ServicesController::class, 'toggle'])->name('toggle_service');
+
     Route::post('/store_service', [ServicesController::class, 'store'])->name('store_service');
+    Route::post('/update_service/{serv_id}', [ServicesController::class, 'update'])->name('update_service');
+
+
 
 
     // ABOUT US ROUTES

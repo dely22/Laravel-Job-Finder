@@ -43,3 +43,8 @@ Route::namespace('Front')->group(function () {
     Route::get('/login', [UsersController::class, 'login'])->name('login');
     Route::get('/register', [UsersController::class, 'register'])->name('register');
 });
+
+Route::namespace('Admin')->group(function () {
+
+    Route::get('/services', [ServicesController::class, 'ourServices'])->name('ourServices');
+});

@@ -74,7 +74,6 @@ class ServicesController extends Controller
     public function update(Request $request, $serv_id)
     {
         $serv = Service::find($serv_id);
-        // $serv->name_ar = $request->name_ar;
         $serv->name = $request->name;
         $serv->is_active = $request->is_active;
         if ($request->hasFile('icon'))
@@ -83,9 +82,6 @@ class ServicesController extends Controller
             return redirect()->route('Services')->with(['success' => 'data updated successful']);
         return redirect()->back()->with(['error' => 'can not update data ']);
     }
-
-
-
 
     public function uploadFile($file)
     {

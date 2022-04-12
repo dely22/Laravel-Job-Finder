@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\service as ModelsService;
+use App\Models\service;
 // use Illuminate\Contracts\Validation\Validator;
 
 use Illuminate\Support\Facades\Validator;
@@ -16,9 +16,9 @@ class ServicesController extends Controller
 
     public function index()
     {
-        $services = ModelsService::orderBy('id', 'desc')->get();
+        $services = Service::orderBy('id', 'desc')->get();
         return view('admin.services.listServices')
-            ->with('ModelsService', $services);
+            ->with('Service', $services);
     }
     public function create()
     {
@@ -26,14 +26,14 @@ class ServicesController extends Controller
     }
     public function edit($serv_id)
     {
-        $service = ModelsService::find($serv_id);
-        return view('admin.services.editServices')
-            ->with('ModelsService', $service);
+        $service = Service::find($serv_id);
+        return view('admin.services.editeService')
+            ->with('Service', $service);
     }
     public function toggle($serv_id)
     {
 
-        $serv = ModelsService::find($serv_id);
+        $serv = Service::find($serv_id);
         $serv->is_active *= -1;
         /*if($serv->is_active==0)
         $serv->is_active=1;
@@ -62,25 +62,25 @@ class ServicesController extends Controller
 
         ]);
 
-        $new_serv = new ModelsService();
+        $new_serv = new Service();
         // $new_serv->name_ar = $request->name_ar;
         $new_serv->name = $request->name;
         $new_serv->is_active = $request->is_active;
-        $new_serv->icon = $request->hasFile('image') ? $this->uploadFile($request->file('image')) : "default_Service.png";
+        $new_serv->icon = $request->hasFile('icon') ? $this->uploadFile($request->file('icon')) : "default_Service.png";
         if ($new_serv->save())
             return redirect()->route('Services')->with(['success' => 'data inserted successful']);
         return redirect()->back()->with(['error' => 'can not add data ']);
     }
     public function update(Request $request, $serv_id)
     {
-        $serv = ModelsService::find($serv_id);
+        $serv = Service::find($serv_id);
         // $serv->name_ar = $request->name_ar;
         $serv->name = $request->name;
         $serv->is_active = $request->is_active;
-        if ($request->hasFile('image'))
-            $serv->icon = $this->uploadFile($request->file('image'));
+        if ($request->hasFile('icon'))
+            $serv->icon = $this->uploadFile($request->file('icon'));
         if ($serv->save())
-            return redirect()->route('listServices')->with(['success' => 'data updated successful']);
+            return redirect()->route('Services')->with(['success' => 'data updated successful']);
         return redirect()->back()->with(['error' => 'can not update data ']);
     }
 
@@ -91,7 +91,7 @@ class ServicesController extends Controller
     {
         $dest = public_path() . "/upload/";
 
-        //$file = $request->file('image');
+        //$file = $request->file('icon');
         $filename = time() . "_" . $file->getClientOriginalName();
         $file->move($dest, $filename);
         return $filename;
@@ -129,12 +129,12 @@ class ServicesController extends Controller
 
 
     //insert
-    //     ModelsService::create([
-    //         // $image = $request->service_Icon,
+    //     Service::create([
+    //         // $icon = $request->service_Icon,
 
-    //         // $iconName = time() . '.' . $image->getClientOriginalExtension(),
+    //         // $iconName = time() . '.' . $icon->getClientOriginalExtension(),
     //         // $request->service_Icon->move('upload', $iconName),
-    //         // $file_name = $this->saveImage($request->service_Icon, 'upload'),
+    //         // $file_name = $this->saveicon($request->service_Icon, 'upload'),
 
     //         $file = $request->file('service_Icon'),
     //         $filename = 'service_Icon-' . time() . '.' . $file->getClientOriginalExtension(),
@@ -149,7 +149,7 @@ class ServicesController extends Controller
     //         'is_active' => $request->is_active,
 
     //     ]);
-    //     $s = new ModelsService();
+    //     $s = new Service();
     //     $s->name = $request->service_Name;
     //     return redirect()->route('store_service')
     //         ->with(['success' => 'user created successful']);
